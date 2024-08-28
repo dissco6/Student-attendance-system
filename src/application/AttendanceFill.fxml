@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="431.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AttendanceFillController">
+   <children>
+      <Text layoutX="195.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lankomumo Žymejimas">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <DatePicker fx:id="date" layoutX="38.0" layoutY="350.0" prefHeight="25.0" prefWidth="221.0" style="-fx-background-radius: 0;" />
+      <ListView fx:id="studentsView" layoutX="37.0" layoutY="70.0" prefHeight="267.0" prefWidth="526.0" />
+      <RadioButton fx:id="was" layoutX="284.0" layoutY="354.0" mnemonicParsing="false" selected="true" text="Buvo">
+         <toggleGroup>
+            <ToggleGroup fx:id="wasOrNot" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="wasNot" layoutX="365.0" layoutY="354.0" mnemonicParsing="false" text="Nebuvo" toggleGroup="$wasOrNot" />
+      <Button layoutX="451.0" layoutY="349.0" mnemonicParsing="false" onAction="#mark" prefHeight="25.0" prefWidth="111.0" style="-fx-background-color: #B62B27; -fx-text-fill: white; -fx-background-radius: 0;" text="Patvirtinti" />
+      <Text fx:id="error_msg" fill="#b62b27" layoutX="37.0" layoutY="399.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #B62B27;" wrappingWidth="209.8828125" />
+      <Button layoutX="411.0" layoutY="386.0" mnemonicParsing="false" onAction="#goToMain" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: #E6E6E6; -fx-background-radius: 0;" text="Grįžti į pradžią" />
+      <Button layoutX="254.0" layoutY="386.0" mnemonicParsing="false" onAction="#goToAttendanceFilter" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: #E6E6E6; -fx-background-radius: 0;" text="Žiūrėti lankomumą" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="600.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <Text layoutX="168.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Studentu registracijos sistema">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="name" layoutX="29.0" layoutY="81.0" prefHeight="27.0" prefWidth="224.0" style="-fx-background-color: transparent; -fx-border-color: #E6E6E6;" />
+      <Label layoutX="28.0" layoutY="63.0" text="Vardas" />
+      <TextField fx:id="surname" layoutX="264.0" layoutY="81.0" prefHeight="27.0" prefWidth="224.0" style="-fx-background-color: transparent; -fx-border-color: #E6E6E6;" />
+      <Label layoutX="263.0" layoutY="63.0" text="Pavarde" />
+      <TextField fx:id="group" layoutX="498.0" layoutY="81.0" prefHeight="27.0" prefWidth="80.0" style="-fx-background-color: transparent; -fx-border-color: #E6E6E6;" />
+      <Label layoutX="498.0" layoutY="63.0" text="Grupe" />
+      <Button layoutX="423.0" layoutY="118.0" mnemonicParsing="false" onAction="#addStudent" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: #B62B27; -fx-background-radius: 0; -fx-text-fill: white;" text="Pridėti studentą" />
+      <Button layoutX="422.0" layoutY="419.0" mnemonicParsing="false" onAction="#updateCSV" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: #E6E6E6; -fx-background-radius: 0;" text="Išsaugoti CSV faile" />
+      <Button layoutX="310.0" layoutY="118.0" mnemonicParsing="false" onAction="#goToAttendanceFilter" prefHeight="26.0" prefWidth="107.0" style="-fx-background-color: #E6E6E6; -fx-background-radius: 0;" text="Lankomumas" />
+      <Button layoutX="261.0" layoutY="419.0" mnemonicParsing="false" onAction="#updateExcel" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: #E6E6E6; -fx-background-radius: 0;" text="Išsaugoti EXCEL faile" />
+      <ListView fx:id="studentsView" layoutX="29.0" layoutY="158.0" prefHeight="251.0" prefWidth="548.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ListView>
+      <Text fx:id="error_msg" fill="#b62b27" layoutX="29.0" layoutY="465.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="388.0" />
+      <Button layoutX="142.0" layoutY="419.0" mnemonicParsing="false" onAction="#loadFromExcel" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #E6E6E6; -fx-background-radius: 0;" text="Skaityti iš EXCEL" />
+      <Button layoutX="29.0" layoutY="419.0" mnemonicParsing="false" onAction="#loadFromCSV" prefHeight="26.0" prefWidth="107.0" style="-fx-background-color: #E6E6E6; -fx-background-radius: 0;" text="Skaityti iš CSV" />
+      <Button layoutX="149.0" layoutY="118.0" mnemonicParsing="false" onAction="#goToAttendanceFill" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: #E6E6E6; -fx-background-radius: 0;" text="Pildyti lankomumą" />
+      <Button layoutX="422.0" layoutY="452.0" mnemonicParsing="false" onAction="#editStudent" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: #B62B27; -fx-background-radius: 0; -fx-text-fill: white;" text="Redaguoti studentą" />
+   </children>
+</AnchorPane>
